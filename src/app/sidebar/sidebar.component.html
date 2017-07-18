@@ -1,0 +1,38 @@
+<div id="wrapper">
+    <div class="overlay" [ngClass]="{ 'show': !setStyle, 'hide': setStyle}"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand" >
+                <a href=""><i class="material-icons" style="font-size: 32px;">directions_bike</i>&nbsp; NG bike shop
+                </a>
+            </li>
+            <li *ngFor="let menuItem of menuItems"
+                (click)="onSelect(menuItem)"
+                [class.selected]="menuItem===selectedItem">
+                <a routerLink="{{menuItem.path}}" routerLinkActive="active" class=""><i class="material-icons">{{menuItem.icon}}</i><span> {{menuItem.title}}</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" [ngClass]="{'is-closed':showCross, 'is-open':!showCross}" class="hamburger" data-toggle="offcanvas" (click)="hamburger_cross()">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="fluid-container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                     <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

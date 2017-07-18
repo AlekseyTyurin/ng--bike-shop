@@ -1,0 +1,264 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* CARD */
+
+ .card-header {
+    padding: 15px 20px 0;
+    z-index: 3;
+}
+ .card-header .category {
+    margin-bottom: 0;
+}
+ .card-header.card-header-text {
+    display: inline-block;
+}
+ .card-header.card-header-text:after {
+    content: "";
+    display: table;
+}
+ .card-header.card-header-icon {
+    float: left;
+}
+ .card-header.card-header-icon i {
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+ .card-header.card-header-tabs .nav-tabs {
+    background: transparent;
+    padding: 0;
+}
+ .card-header.card-header-tabs .nav-tabs-title {
+    float: left;
+    padding: 10px 10px 10px 0;
+    line-height: 24px;
+}
+ .card-header.card-header-icon + .card-content .card-title {
+    padding-bottom: 15px;
+}
+
+
+.navbar .navbar-collapse, .navbar .navbar-form {
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 0;
+}
+
+.navbar, .navbar.navbar-default {
+    background-color: #FFFFFF;
+    color: #555555;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border-bottom: 1px solid #ededf3;
+    padding: 10px 0;
+}
+
+.navbar .navbar-brand {
+    margin-left: 300px;
+    position: relative;
+    height: 50px;
+    line-height: 30px;
+    color: inherit;
+    padding: 10px 15px;
+}
+
+.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+    color: inherit;
+    background-color: transparent;
+}
+.navbar .notification {
+    position: absolute;
+    top: 5px;
+    border: 1px solid #FFF;
+    right: 10px;
+    font-size: 9px;
+    background: #f44336;
+    color: #FFFFFF;
+    min-width: 20px;
+    padding: 0 5px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 19px;
+    vertical-align: middle;
+    display: block;
+}
+
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    right: 17px;
+    z-index: 10;
+}
+
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    z-index: 9;
+}
+
+
+.navbar .navbar-nav > li > a {
+    color: inherit;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.navbar .navbar-nav > li > a:not(.btn) .material-icons {
+    margin-top: -3px;
+    top: 0;
+    position: relative;
+    margin-right: 3px;
+}
+
+.navbar .navbar-nav > li > a .material-icons, .navbar .navbar-nav > li > a .fa {
+    font-size: 20px;
+}
+
+a .material-icons {
+    vertical-align: middle;
+}
+
+/*Search Form*/
+.navbar .navbar-form .form-group .form-control, .navbar .navbar-form .form-control {
+    border-color: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    height: 28px;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+
+.form-control, .form-group .form-control {
+    border: 0;
+    background-image: linear-gradient(#ffa726, #fb8c00), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: 400;
+}
+
+.navbar .navbar-form {
+    margin: 4px 0 0;
+}
+
+.navbar .navbar-form .form-group {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .navbar-form .form-group .material-input:before, .navbar .navbar-form .form-group.is-focused .material-input:after {
+    background-color: inherit;
+}
+
+.navbar .navbar-form .form-group .form-control,
+.navbar .navbar-form .form-control {
+    border-color: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    height: 28px;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+
+.navbar, .navbar.navbar-default {
+    background-color: #FFFFFF;
+    color: #555555;
+}
+
+.navbar .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar .navbar-form input.form-control::-moz-placeholder, .navbar.navbar-default .navbar-form .form-group input.form-control::-moz-placeholder,
+.navbar.navbar-default .navbar-form input.form-control::-moz-placeholder {
+    color: #555555;
+}
+
+.navbar .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar .navbar-form input.form-control:-ms-input-placeholder, .navbar.navbar-default .navbar-form .form-group input.form-control:-ms-input-placeholder,
+.navbar.navbar-default .navbar-form input.form-control:-ms-input-placeholder {
+    color: #555555;
+}
+
+.navbar .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar .navbar-form input.form-control::-webkit-input-placeholder, .navbar.navbar-default .navbar-form .form-group input.form-control::-webkit-input-placeholder,
+.navbar.navbar-default .navbar-form input.form-control::-webkit-input-placeholder {
+    color: #555555;
+}
+
+.btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover, .navbar .navbar-nav > li > a.btn.btn-white, .navbar .navbar-nav > li > a.btn.btn-white:focus, .navbar .navbar-nav > li > a.btn.btn-white:hover {
+    background-color: #FFFFFF;
+    color: #999999;
+}
+
+.navbar .btn {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn.btn-just-icon, .navbar .navbar-nav > li > a.btn.btn-just-icon {
+    font-size: 20px;
+    padding: 12px 12px;
+    line-height: 1em;
+}
+
+.btn.btn-round, .navbar .navbar-nav > li > a.btn.btn-round {
+    border-radius: 30px;
+}
+
+.btn:focus, .btn:active, .btn:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default:hover, .navbar .navbar-nav > li > a.btn:focus, .navbar .navbar-nav > li > a.btn:active, .navbar .navbar-nav > li > a.btn:hover, .navbar .navbar-nav > li > a.btn.btn-default:focus, .navbar .navbar-nav > li > a.btn.btn-default:active, .navbar .navbar-nav > li > a.btn.btn-default:hover {
+    box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+}
+@media (min-width: 768px) {
+    .navbar > .container-fluid .navbar-brand {
+        margin-left: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .navbar {
+        /*
+            .navbar-form {
+              margin-top: 10px;
+            }
+        */
+    }
+    .navbar .navbar-brand {
+        height: 50px;
+        padding: 10px 15px;
+    }
+    .navbar .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
