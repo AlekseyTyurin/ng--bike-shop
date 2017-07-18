@@ -11,7 +11,7 @@ import {Routes, RouterModule} from "@angular/router";
 import {ContactComponent} from './contact/contact.component';
 import {AboutComponent} from './about/about.component';
 import {TruncatePipe} from "./shared/pipes/truncate.pipe";
-import {BikeService} from "./dashboard/bike.services";
+import {BikeService} from "./services/bike.services";
 
 
 

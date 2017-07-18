@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {IBike} from "./bike";
-import {BikeService} from "./bike.services";
+import {BikeService} from "../services/bike.services";
 // import {BikeService} from "./dashboard.service";
 
 @Component({
@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
     errorMessage: string;
 
     constructor(private _bikeService: BikeService) {
-        //this.bikes = _bikeService.getBikes();
+        this.bikes = _bikeService.getBikes();
     }
 
     ngOnInit() {
@@ -22,11 +22,11 @@ export class DashboardComponent implements OnInit {
     }
 
     getBikes() {
-        this._bikeService.getBikes()
-            .subscribe(
-            books => this.bikes = books,
-            error => this.errorMessage = <any>error
-        );
+        // this._bikeService.getBikes()
+        //     .subscribe(
+        //     books => this.bikes = books,
+        //     error => this.errorMessage = <any>error
+        // );
     }
 
 }
