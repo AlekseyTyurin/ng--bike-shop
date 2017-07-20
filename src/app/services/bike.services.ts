@@ -1,21 +1,11 @@
-import {Injectable, OnInit} from "@angular/core";
-import {Http, Response} from "@angular/http";
-import {Observable} from "rxjs/Observable";
+import {Injectable} from "@angular/core";
 import {IBike} from "../dashboard/bike";
-import 'rxjs/add/operator/map';
+import "rxjs/add/operator/map";
 
 
 @Injectable()
 
 export class BikeService {
-
-    //constructor(private _http: Http) {}
-
-
-    // getBikes(): Observable<IBike[]> {
-    //     return this._http.get('api/bikes/road-bikes.json')
-    //         .map((response: Response) => <IBike[]>response.json())
-    // }
 
     getBikes(): IBike[] {
         return [

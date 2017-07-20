@@ -4,6 +4,13 @@
     background-color: transparent;
 }
 
+a .material-icons {
+    vertical-align: middle;
+}
+
+a .material-icons:after {
+    margin-top: 5px;
+}
 /*.nav.sidebar-nav > i {*/
     /*font-size: 24px;*/
     /*float: left;*/

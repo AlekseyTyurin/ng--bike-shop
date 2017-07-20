@@ -12,12 +12,14 @@ import {ContactComponent} from './contact/contact.component';
 import {AboutComponent} from './about/about.component';
 import {TruncatePipe} from "./shared/pipes/truncate.pipe";
 import {BikeService} from "./services/bike.services";
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'gallery', component: GalleryComponent },
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent }
 ];
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
         DashboardComponent,
         ContactComponent,
         AboutComponent,
-        TruncatePipe
+        TruncatePipe,
+        GalleryComponent,
+        // ImageModalComponent
     ],
     imports: [
         BrowserModule,
