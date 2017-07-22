@@ -1,0 +1,14 @@
+<div *ngFor="let image of activeImages" class="image-container" @image>
+  <div class="image-info">
+    <h2>Title</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur ipsum eget tempus vulputate.
+    </p>
+    <p>
+      Proin sed odio aliquam, commodo purus ut, auctor mauris. Mauris ut urna et tellus ullamcorper
+    </p>
+  </div>
+  <div class="image-preview">
+    <app-image [image]="image"></app-image>
+  </div>
+</div>

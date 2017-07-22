@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {GROUPS} from './groups.data';
+import {GROUPS} from '../gallery/groups.data';
 
 @Injectable()
 export class GroupsService {

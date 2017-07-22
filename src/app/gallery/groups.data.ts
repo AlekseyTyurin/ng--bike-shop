@@ -2,7 +2,7 @@ export const GROUPS = [
     {
         title: 'Cyclocross',
         images: [
-            {id: 1, url:'../assets/angular-1.svg'},
+            {id: 1, url:'../assets/cannondale-supersix-evo-black-inc-277968-1-sm.jpg'},
             {id: 2, url:'../assets/angular-2.png'},
             {id: 3, url:'../assets/angular-3.jpg'},
             {id: 4, url:'../assets/angular-4.png'},

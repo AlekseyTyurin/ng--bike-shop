@@ -1,0 +1,47 @@
+:host {
+    margin:1rem 0 2rem;
+    display:block;
+}
+
+.title {
+    padding:0 20px;
+}
+
+.title h2 {
+    text-transform: uppercase;
+    letter-spacing:2px;
+    font-size:1.2rem;
+}
+
+.content {
+    flex-direction: row;
+    flex: 1;
+    display: flex;
+    height: 128px;
+    padding:0 20px;
+    margin-bottom:1rem;
+}
+
+.upload-area {
+    width: 20%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 32pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s background ease;
+
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+}
+
+app-image:hover {
+    cursor:pointer;
+    outline:2px solid rgba(0,0,0,0.5);
+}
+
+.upload-area:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
