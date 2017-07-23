@@ -2,19 +2,19 @@ export const GROUPS = [
     {
         title: 'Cyclocross',
         images: [
-            {id: 1, url:'../assets/cannondale-supersix-evo-black-inc-277968-1-sm.jpg'},
-            {id: 2, url:'../assets/angular-2.png'},
-            {id: 3, url:'../assets/angular-3.jpg'},
-            {id: 4, url:'../assets/angular-4.png'},
+            {id: 1, url:'../../assets/images/cyclocross_1.jpg'},
+            {id: 2, url:'../../assets/images/cyclocross_2.jpg'},
+            {id: 3, url:'../../assets/images/cyclocross_3.jpg'},
+            {id: 4, url:'../../assets/images/cyclocross_4.jpg'},
         ]
     },
     {
         title: 'Touring',
         images: [
-            {id: 6, url:'../assets/html51.png'},
-            {id: 7, url:'../assets/html52.png'},
-            {id: 8, url:'../assets/html53.jpg'},
-            {id: 9, url:'../assets/html5-chrome.jpg'}
+            {id: 6, url:'../../assets/images/touring_1.jpg'},
+            {id: 7, url:'../../assets/images/touring_2.jpg'},
+            {id: 8, url:'../../assets/images/touring_3.jpg'},
+            {id: 9, url:'../../assets/images/touring_4.jpg'}
         ]
     },
     {

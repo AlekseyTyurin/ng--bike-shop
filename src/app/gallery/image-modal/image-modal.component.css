@@ -20,17 +20,15 @@
     bottom: 0;
     right: 0;
     background: white;
-
     padding: 15px 30px;
-
-    border-radius:3px;
+    border-radius: 3px;
 }
 
 .back {
-    background:#aaa;
+    background: #aaa;
 }
 
 .title h2 {
-    text-transform:uppercase;
-    letter-spacing:2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }

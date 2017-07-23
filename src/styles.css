@@ -1,13 +1,18 @@
-/*body {*/
-    /*position: relative;*/
-    /*overflow-x: hidden;*/
-    /*background-color: #F8F8F8;*/
-/*}*/
+html, body, select, option, input, code, pre {
+    font-size: 1rem;
+    font-family: ProximaNova;
+}
 
-/*body,*/
-/*html {*/
-    /*height: 100%;*/
-/*}*/
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    background: #C0C0C0;
+    color: white;
+    padding-bottom: 100px;
+}
 
 .loader {
     margin: 0 auto;
@@ -27,7 +32,7 @@
 }
 
 *, *:before, *:after {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 a, a:link, a:visited, a:active {
@@ -42,21 +47,7 @@ a, a:link, a:visited, a:active {
     font-style: normal;
 }
 
-html, body, select, option, input, code, pre {
-    font-size:1rem;
-    font-family:ProximaNova;
-}
 
-html {
-    font-size:16px;
-}
-
-/*body {*/
-    /*margin: 0;*/
-    /*background: #181818;*/
-    /*color: white;*/
-    /*padding-bottom:100px;*/
-/*}*/
 
 button {
     user-select: none;
@@ -67,69 +58,71 @@ button {
 }
 
 .arrow {
-    width:200px;
-    height:100px;
-    background:maroon;
-    position:relative;
-    border:2px solid white;
+    width: 200px;
+    height: 100px;
+    background: maroon;
+    position: relative;
+    border: 2px solid white;
 }
 
 .arrow:after {
-    content:"";
-    border:10px solid transparent;;
-    border-top-color:maroon;
-    position:absolute;
-    left:50%;
-    bottom:0;
-    margin-left:-10px;
-    margin-bottom:-20px;
+    content: "";
+    border: 10px solid transparent;;
+    border-top-color: maroon;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
 }
+
 .arrow:before {
-    content:"";
-    border:10px solid transparent;;
-    border-top-color:white;
-    position:absolute;
-    left:50%;
-    bottom:0;
-    margin-left:-10px;
-    margin-bottom:-22px;
+    content: "";
+    border: 10px solid transparent;;
+    border-top-color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -22px;
 }
 
 .toolbar {
-    z-index:100;
-    position:fixed;
-    background: #121212;
+    z-index: 100;
+    position: fixed;
+    /*background: #121212;*/
+    background: lightsteelblue;
     box-shadow: 0 0 50px black;
     height: 64px;
     padding: 0px 8px;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     flex: 1;
 }
 
 .toolbar a {
-    font-size:.9rem;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    padding:0px 24px;
-    color:white!important;
-    line-height:64px;
-    color:#ddd!important;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0px 24px;
+    color: white !important;
+    line-height: 64px;
+    color: #ddd !important;
 }
 
 .toolbar a:hover {
-    color:#fff!important;
+    color: #fff !important;
 }
 
 .toolbar a img {
-    height:25px;
-    margin-top:-3px;
-    vertical-align:middle;
+    height: 25px;
+    margin-top: -3px;
+    vertical-align: middle;
 }
 
 .toolbar a + a {
-    border-left:1px solid #ddd;
+    border-left: 1px solid #ddd;
 }
 
 .fab {
@@ -143,11 +136,11 @@ button {
     color: white;
     font-size: 18pt;
 
-    transition:0.3s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 0.3s cubic-bezier(0.35, 0, 0.25, 1);
 }
 
 .fab:hover {
-    transform:scale(1.1);
+    transform: scale(1.1);
     background-color: #E53935;
 }
 
@@ -159,42 +152,43 @@ select, input[type="file"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius:0;
+    border-radius: 0;
 }
 
 .actions {
-    padding:1rem 0;
+    padding: 1rem 0;
 }
 
 .field, .field-action {
-    background:#fff;
-    font-size:1.2rem;
-    padding:5px;
+    background: #fff;
+    font-size: 1.2rem;
+    padding: 5px;
 }
 
 .field {
-    cursor:text;
-    border:1px solid #aaa;
-    width:100%;
+    cursor: text;
+    border: 1px solid #aaa;
+    width: 100%;
 }
 
 .field-group {
-    padding:1rem 0;
+    padding: 1rem 0;
 }
 
 .field-group label {
-    font-size:1.2rem;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    margin-bottom:10px;
-    display:block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .actions {
-    margin-top:1rem;
+    margin-top: 1rem;
 }
+
 .actions .main {
-    padding:1rem;
-    background:#3e8acd;
-    color:white;
+    padding: 1rem;
+    background: #3e8acd;
+    color: white;
 }
