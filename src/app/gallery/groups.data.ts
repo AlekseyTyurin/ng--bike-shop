@@ -20,28 +20,31 @@ export const GROUPS = [
     {
         title: 'Triathlon/Time Trial',
         images: [
-            {id: 10, url:'../assets/css3-1.jpg'},
-            {id: 11, url:'../assets/css3-2.jpg'},
-            {id: 12, url:'../assets/css3-3.jpg'},
-            {id: 13, url:'../assets/css3-4.png'}
+            {id: 10, url:'../../assets/images/triathlon_1.jpg'},
+            {id: 11, url:'../../assets/images/triathlon_2.jpg'},
+            {id: 12, url:'../../assets/images/triathlon_3.jpg'},
+            {id: 13, url:'../../assets/images/triathlon_4.jpg'}
+
         ]
     },
     {
         title: 'Mountain',
         images: [
-            {id: 14, url:'../assets/js-1.png'},
-            {id: 15, url:'../assets/js-2.jpg'},
-            {id: 16, url:'../assets/js-3.jpg'},
-            {id: 17, url:'../assets/js-4.png'}
+            {id: 14, url:'../../assets/images/mtb_1.jpg'},
+            {id: 15, url:'../../assets/images/mtb_2.jpg'},
+            {id: 16, url:'../../assets/images/mtb_3.jpg'},
+            {id: 17, url:'../../assets/images/mtb_4.jpg'}
+
         ]
     },
     {
         title: 'Track/Fixed-Gear',
         images: [
-            {id: 18, url:'../assets/vim-1.svg'},
-            {id: 19, url:'../assets/vim-2.jpg'},
-            {id: 20, url:'../assets/vim-3.jpg'},
-            {id: 21, url:'../assets/vim-4.png'}
+            {id: 18, url:'../../assets/images/track-fixed-gear_1.jpg'},
+            {id: 19, url:'../../assets/images/track-fixed-gear_2.jpg'},
+            {id: 20, url:'../../assets/images/track-fixed-gear_3.jpg'},
+            {id: 21, url:'../../assets/images/track-fixed-gear_4.jpg'}
+
         ]
     }
 ]
