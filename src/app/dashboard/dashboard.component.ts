@@ -8,8 +8,8 @@ import {BikeService} from "../services/bike.services";
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-
+export class BikeListComponent {
+    bikeImageUrl: string = "../../assets/images/cannondale-supersix-evo-hi-mod-dura-ace-277975-11-sm.jpg";
     bikes: IBike[];
     errorMessage: string;
 
