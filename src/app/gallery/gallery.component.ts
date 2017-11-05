@@ -1,4 +1,4 @@
-import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, ViewChild, ViewEncapsulation, OnDestroy, OnInit} from '@angular/core';
 import {ModalServiceService} from "../services/modal-service.service";
 import {trigger, animate, style, group, animateChild, query, stagger, transition} from '@angular/animations';
 
@@ -10,38 +10,41 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
     animations: [
         trigger('routerAnimations', [
             transition('about => home', [
-                query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0, right: 0 })),
-                query(':leave', style({ zIndex: 100 })),
-                query(':enter', style({ transform: 'translateY(100%)' })),
+                query(':enter, :leave', style({position: 'absolute', top: 0, left: 0, right: 0})),
+                query(':leave', style({zIndex: 100})),
+                query(':enter', style({transform: 'translateY(100%)'})),
 
                 group([
                     query(':leave', group([
-                        animate('500ms cubic-bezier(.35,0,.25,1)', style({ transform: 'translateY(-100%)' })), // y: '-100%'
+                        animate('500ms cubic-bezier(.35,0,.25,1)', style({transform: 'translateY(-100%)'})), // y: '-100%'
                         animateChild()
                     ])),
                     query(':enter', group([
-                        animate('500ms cubic-bezier(.35,0,.25,1)', style({ transform: 'translateY(0%)' })),
+                        animate('500ms cubic-bezier(.35,0,.25,1)', style({transform: 'translateY(0%)'})),
                         animateChild()
                     ]))
                 ])
             ]),
             transition('home => about', [
                 query(':enter, :leave',
-                    style({ position: 'absolute', top: 0, left: 0, right: 0 })),
+                    style({position: 'absolute', top: 0, left: 0, right: 0})),
                 query(':enter', [
-                    style({ opacity:0, transform: 'translateX(100%)'}),
+                    style({opacity: 0, transform: 'translateX(100%)'}),
                     query('contributor', [
-                        style({ opacity:0, transform: 'scale(0)'})
+                        style({opacity: 0, transform: 'scale(0)'})
                     ])
                 ]),
 
                 query(':leave', [
                     query('.image', [
                         stagger(50, [
-                            animate('500ms cubic-bezier(.35,0,.25,1)', style({ opacity: 0, transform: 'translateY(-50px)' }))
+                            animate('500ms cubic-bezier(.35,0,.25,1)', style({
+                                opacity: 0,
+                                transform: 'translateY(-50px)'
+                            }))
                         ])
                     ]),
-                    animate('800ms cubic-bezier(.35,0,.25,1)', style({ opacity:0, transform: 'translateX(-100%)' }))
+                    animate('800ms cubic-bezier(.35,0,.25,1)', style({opacity: 0, transform: 'translateX(-100%)'}))
                 ]),
 
                 group([
@@ -58,17 +61,23 @@ import {trigger, animate, style, group, animateChild, query, stagger, transition
         ])
     ]
 })
-export class GalleryComponent {
+export class GalleryComponent implements OnInit, OnDestroy {
     @ViewChild('modal')
     public modal;
 
-    constructor(private _modalService: ModalServiceService) {}
+    constructor(private _modalService: ModalServiceService) {
+    }
 
     ngOnInit() {
         this._modalService.setModal(this.modal);
+        document.querySelector('body').classList.add('gallery-background');
     }
 
-    prepareRouteTransition(outlet) {
+    ngOnDestroy() {
+        document.querySelector('body').classList.remove('gallery-background');
+    }
+
+    public prepareRouteTransition(outlet) {
         const animation = outlet.activatedRouteData['animation'] || {};
         return animation['value'] || null;
     }

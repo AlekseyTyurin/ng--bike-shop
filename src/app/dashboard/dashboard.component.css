@@ -42,6 +42,7 @@
 }
 
 .item {
+    min-height: 500px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -153,6 +154,56 @@
     width: 32px;
     cursor: pointer;
     position: relative;
+}
+
+/*NEW*/
+
+.selected {
+    background-color: #f48e39 !important;
+    color: white;
+}
+.items-list {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+.items-list li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+}
+.items-list li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}
+.items-list li.selected:hover {
+    background-color: #f05400 !important;
+    color: white;
+}
+.items-list .text {
+    position: relative;
+    top: -3px;
+}
+.items-list .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
 }
 
 @media screen and (min-width: 320px) {
@@ -344,6 +395,10 @@
     .pnl-description {
         padding-left: 1.5em
     }
+
+    .item {
+        min-height: 550px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -351,56 +406,4 @@
         width: 1400px;
         margin: 0 auto
     }
-}
-
-
-
-/*NEW*/
-
-.selected {
-    background-color: #f48e39 !important;
-    color: white;
-}
-.items-list {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
-}
-.items-list li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
-}
-.items-list li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
-}
-.items-list li.selected:hover {
-    background-color: #f05400 !important;
-    color: white;
-}
-.items-list .text {
-    position: relative;
-    top: -3px;
-}
-.items-list .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
 }

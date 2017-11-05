@@ -8,7 +8,6 @@ import {AppComponent} from "./app.component";
 import {NavbarComponent} from "./shared/navbar/navbar.component";
 import {FooterComponent} from "./shared/footer/footer.component";
 import {SidebarComponent} from "./sidebar/sidebar.component";
-import {DashboardComponent} from "./dashboard/dashboard.component";
 import {Routes, RouterModule} from "@angular/router";
 import {ContactComponent} from "./contact/contact.component";
 import {AboutComponent} from "./about/about.component";
@@ -28,6 +27,7 @@ import {GalleryComponent} from "./gallery/gallery.component";
 import {ImageModalComponent} from "./gallery/image-modal/image-modal.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 
 

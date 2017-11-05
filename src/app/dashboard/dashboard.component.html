@@ -4,17 +4,17 @@
             <li class="grid-tile" *ngFor="let bike of bikes">
                 <div class="item">
                     <div>
-                        <img [src]="bike.bikeImageUrl" class="item-img">
+                        <img [src]="bike.imageUrl" class="item-img">
                     </div>
                     <div class="item-pnl">
                         <div class="pnl-wrapper">
                             <div class="pnl-description">
-                                <span class="pnl-label" style="color: #79aefe; font-weight: bold;">{{bike.bikeName | uppercase}}</span>
-                                <div style="font-size: 10px; line-height: 120%; text-align: justify;">{{bike.description
+                                <span class="pnl-label" style="color: #79aefe; font-weight: bold;">{{bike.name | uppercase}}</span>
+                                <div style="font-size: 10px; line-height: 120%; text-align: justify; color: #009688;">{{bike.description
                                     | limitChar: 130}}
                                 </div>
                                 <hr>
-                                <span class="pnl-price">{{bike.bikePrice | currency: 'USD' : true}}</span>
+                                <span class="pnl-price">{{bike.price | currency: 'USD' : true}}</span>
                             </div>
                             <div class="pnl-favorites">
                                 <div class="pnl-ic-wrapper">

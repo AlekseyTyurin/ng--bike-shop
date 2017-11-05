@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 html, body, select, option, input, code, pre {
     font-size: 1rem;
     font-family: ProximaNova;
@@ -9,9 +13,12 @@ html {
 
 body {
     margin: 0;
-    background: #C0C0C0;
     color: white;
     padding-bottom: 100px;
+}
+
+.gallery-background {
+    background: #C0C0C0;
 }
 
 .loader {
@@ -20,7 +27,6 @@ body {
     position: absolute;
     display: block;
     left: 43%;
-    /*right: 0;*/
     z-index: 1;
     -webkit-transform: translate3d(0, -50%, 0);
     -moz-transform: translate3d(0, -50%, 0);
@@ -31,9 +37,7 @@ body {
     top: 50%;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-}
+
 
 a, a:link, a:visited, a:active {
     text-decoration: none;

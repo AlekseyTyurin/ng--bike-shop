@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {IBike} from "./bike";
+import {Bike} from "./bike";
 import {BikeService} from "../services/bike.services";
 // import {BikeService} from "./dashboard.service";
 
@@ -8,13 +8,11 @@ import {BikeService} from "../services/bike.services";
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.css']
 })
-export class BikeListComponent {
-    bikeImageUrl: string = "../../assets/images/cannondale-supersix-evo-hi-mod-dura-ace-277975-11-sm.jpg";
-    bikes: IBike[];
+export class DashboardComponent {
+    bikes: any;
     errorMessage: string;
 
     constructor(private _bikeService: BikeService) {
-        this.bikes = _bikeService.getBikes();
     }
 
     ngOnInit() {
@@ -22,11 +20,11 @@ export class BikeListComponent {
     }
 
     getBikes() {
-        // this._bikeService.getBikes()
-        //     .subscribe(
-        //     books => this.bikes = books,
-        //     error => this.errorMessage = <any>error
-        // );
+        this._bikeService.getBikes()
+            .subscribe(
+            data => this.bikes = data,
+            error => this.errorMessage = <any>error
+        );
     }
 
 }
