@@ -28,7 +28,7 @@ import {ImageModalComponent} from "./gallery/image-modal/image-modal.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
 import {DashboardComponent} from "./dashboard/dashboard.component";
-
+import {CarouselComponent} from './shared/carousel/carousel.component';
 
 
 const appRoutes: Routes = [
@@ -56,7 +56,8 @@ const appRoutes: Routes = [
         ImageComponent,
         ImagePreviewComponent,
         IndexPageComponent,
-        ImageModalComponent
+        ImageModalComponent,
+        CarouselComponent
     ],
     imports: [
         CommonModule,
