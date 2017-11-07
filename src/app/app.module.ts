@@ -29,7 +29,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {CommonModule} from "@angular/common";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {CarouselComponent} from './shared/carousel/carousel.component';
-
+import {AngularFireModule} from "angularfire2";
+import {AngularFirestoreModule} from "angularfire2/firestore";
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
@@ -38,6 +39,16 @@ const appRoutes: Routes = [
     {path: 'about', component: AboutComponent},
     {path: 'contact', component: ContactComponent}
 ];
+
+// Must export the config
+export const firebaseConfig = {
+    apiKey: "AIzaSyDaU010tX-Kgh9rexkhOcurnW4sRQs59uo",
+    authDomain: "ng-bike-shop.firebaseapp.com",
+    databaseURL: "https://ng-bike-shop.firebaseio.com",
+    projectId: "ng-bike-shop",
+    storageBucket: "ng-bike-shop.appspot.com",
+    messagingSenderId: "376532030333"
+};
 
 @NgModule({
     declarations: [
@@ -57,11 +68,14 @@ const appRoutes: Routes = [
         ImagePreviewComponent,
         IndexPageComponent,
         ImageModalComponent,
-        CarouselComponent
+        CarouselComponent,
     ],
     imports: [
         CommonModule,
         BrowserModule,
+        AngularFireModule.initializeApp(firebaseConfig),  // Add this
+        AngularFirestoreModule,
+
         FormsModule,
         HttpModule,
         BrowserAnimationsModule,
