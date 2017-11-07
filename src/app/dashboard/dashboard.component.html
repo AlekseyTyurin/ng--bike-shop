@@ -8,7 +8,7 @@
         <ul class="grid">
             <li class="grid-tile" *ngFor="let bike of offlineBikes">
                 <div class="item">
-                    <div>
+                    <div >
                         <img [src]="bike.imageUrl" class="item-img">
                     </div>
                     <div class="item-pnl">
@@ -44,15 +44,16 @@
 
 
 <hr>
+<h2 align="center" class="firebase-header">DATA FROM FIREBASE</h2>
 <div class="layout">
     <section class="inner">
         <ul class="grid">
             <li class="grid-tile" *ngFor="let bike of bikes | async">
-                <div class="item">
-                    <div>
+                <div class="item firebase-item">
+                    <div class="firebase-item-img">
                         <img [src]="bike.img" class="item-img" alt="{{bike.name}}">
                     </div>
-                    <div class="item-pnl">
+                    <div class="firebase-item-pnl">
                         <div class="pnl-wrapper">
                             <div class="pnl-description">
                                 <span class="pnl-label" style="color: #79aefe; font-weight: bold;">{{bike.name | uppercase}}</span>
@@ -80,12 +81,4 @@
     </section>
 </div>
 
-<!--<ul *ngFor="let bike of bikes | async">-->
-    <!--<li>-->
-        <!--<img [src]="bike.img" alt="{{bike.name}}">-->
-        <!--<strong>{{ bike.name}}</strong>-->
-        <!--<br>-->
-        <!--{{bike.description}}-->
-    <!--</li>-->
-<!--</ul>-->
 
